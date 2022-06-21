@@ -42,5 +42,6 @@ int main()
         }
     }
 
+    free(H);
     return 0;
 }
