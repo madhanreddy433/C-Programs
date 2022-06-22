@@ -74,7 +74,7 @@ bool is_polindrome()
     }
 
     //reverse the second half of Linked List
-    rev = reverse_linked_list(fast->next);
+    rev = reverse_linked_list(slow->next);
 
     //compare first half and second half of elements
     slow = head;
