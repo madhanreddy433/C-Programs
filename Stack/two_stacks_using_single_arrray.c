@@ -1,10 +1,10 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-#define SIZE 10;
-
-int array[10]; //declaration of array type variable
-int top1 = -1;
-int top2 = SIZE;
+int *array; //declaration of array type variable
+int size;   //size of array
+int top1;
+int top2;
 
 void push1(int data)
 {
@@ -59,7 +59,7 @@ int pop2()
 {
     int popped_element;
     //checking underflow condition
-    if(top2 < 10)
+    if(top2 < size)
     {
         popped_element = array[top2];
         top2++;
@@ -88,7 +88,7 @@ void display_stack2()
 {
     int i;
 
-    for(i=top2; i<10; ++i)
+    for(i=top2; i<size; ++i)
     {
         printf("%d ", array[i]);
     }
@@ -99,6 +99,14 @@ void display_stack2()
 
 int main()
 {
+    printf("enter the size of an array: ");
+    scanf("%d", &size);
+
+    array = (int *)malloc(size*sizeof(int));
+
+    top1 = -1;
+    top2 = size;
+
     push1(10);
     push2(20);
     push2(30);
