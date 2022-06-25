@@ -32,7 +32,7 @@ struct node *insert(struct node *p, int key)
 
 int main()
 {
-    struct node *root = NNULL;
+    struct node *root = NULL;
 
     root = insert(root, 30);
     insert(root, 20);
