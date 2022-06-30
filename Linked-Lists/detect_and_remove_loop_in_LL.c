@@ -27,7 +27,7 @@ void detect_and_remove_loop(struct node *head)
         return; //no loop return
     
     slow_ptr = head;
-    while(slow_ptr->next !- fast_ptr->next)
+    while(slow_ptr->next != fast_ptr->next)
     {
         slow_ptr = slow_ptr->next;
         fast_ptr = fast_ptr->next;
